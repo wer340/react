@@ -34,6 +34,7 @@ componentDidMount(){
   fetch('https://jsonplaceholder.typicode.com/users')
   .then( data =>data.json())//data=response
   .then(item=>console.log(item))//item=users best practise
+ 
 
 }
   render(){
