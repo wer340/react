@@ -15,6 +15,7 @@ class App extends Component {
     <div className="App">
     <h1>hi my world </h1>
     <h1>{this.state.message}</h1>
+    <button onClick={()=>{this.setState({message:"Would you like to abolish this law"})}}>ClickMe</button>
     </div>
   );
 }
