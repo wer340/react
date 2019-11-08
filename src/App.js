@@ -29,7 +29,7 @@ componentDidMount(){
 
     
     
-      <CardList>{this.state.monsters.map(item=>(<h3 key={item.id}>{item.name}</h3>))}</CardList>
+      <CardList Love={this.state.monsters} />
     
     
     </div>
