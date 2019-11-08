@@ -14,6 +14,7 @@ class App extends Component {
 componentDidMount(){
   fetch('https://jsonplaceholder.typicode.com/users')
   .then( data =>data.json())//data=response
+  // .then( data =>console.log(data))//data=response
   .then(item=>this.setState({monsters:item}))//item=users best practise
  
 
@@ -26,7 +27,21 @@ componentDidMount(){
     <button onClick={()=>{this.setState({message:"Would you like to abolish this law"})}}>ClickMe</button>
 
     <div>
-      {this.state.monsters.map(item=>(<h1 key={item.id}>{item.name}</h1>))}
+      
+      <table>
+        <thead>
+          <td>کمپانی</td>
+          <td>شهر</td>
+          <td>وبسایت</td>
+          <td>تلفن</td>
+        </thead>
+        <tr>
+          <td>{this.state.monsters.map(item=>(<h3 key={item.id}>{item.company.name}</h3>))}</td>
+          <td>{this.state.monsters.map(item=>(<h3 key={item.id}>{item.address.city}</h3>))}</td>
+          <td>{this.state.monsters.map(item=>(<h4 key={item.id}>{item.website}</h4>))}</td>
+          <td>{this.state.monsters.map(item=>(<h4 key={item.id}>{item.phone}</h4>))}</td>
+        </tr>
+      </table>
     </div>
     </div>
   );
