@@ -9,18 +9,23 @@ class App extends Component {
       message:"my world getting little for this resents approach me ",
       monsters:[
         {
-          name:"frankastain"
+          name:"frankastain",
+          id:'mr1'
          },
          {
-           name:"Drucula"
+           name:"Drucula",
+           id:'mr2'
          },
          {
-           name:"Zombi"
+           name:"Zombi",
+           id:'mr3'
          },
          {
-           name:"Godzila"
+           name:"Godzila",
+           id:'mr4'
          },{
-           name:"Mother Of Dragon"
+           name:"Mother Of Dragon",
+           id:'mr5'
          }
       ]
     }
@@ -34,7 +39,7 @@ class App extends Component {
     <button onClick={()=>{this.setState({message:"Would you like to abolish this law"})}}>ClickMe</button>
 
     <div>
-      {this.state.monsters.map(item=>(<h1>{item.name}</h1>))}
+      {this.state.monsters.map(item=>(<h1 key={item.id}>{item.name}</h1>))}
     </div>
     </div>
   );
