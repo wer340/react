@@ -7,33 +7,14 @@ class App extends Component {
     super();
     this.state={
       message:"my world getting little for this resents approach me ",
-      monsters:[
-        {
-          name:"frankastain",
-          id:'mr1'
-         },
-         {
-           name:"Drucula",
-           id:'mr2'
-         },
-         {
-           name:"Zombi",
-           id:'mr3'
-         },
-         {
-           name:"Godzila",
-           id:'mr4'
-         },{
-           name:"Mother Of Dragon",
-           id:'mr5'
-         }
-      ]
+      monsters:[]
+           
     }
   }
 componentDidMount(){
   fetch('https://jsonplaceholder.typicode.com/users')
   .then( data =>data.json())//data=response
-  .then(item=>console.log(item))//item=users best practise
+  .then(item=>this.setState({monsters:item}))//item=users best practise
  
 
 }
