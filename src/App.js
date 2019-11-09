@@ -19,8 +19,11 @@ componentDidMount(){
   .then( data =>data.json())//data=response
   // .then( data =>console.log(data))//data=response
   .then(item=>this.setState({monsters:item}))//item=users best practise
- 
+ this.handleChange=this.handleChange.bind(this);
 
+}
+handleChange(e){
+  this.setState({serachField:e.target.value});
 }
   render(){
     const{monsters,serachField}=this.state;
@@ -28,13 +31,14 @@ componentDidMount(){
       item => item.name.toLowerCase().includes(serachField.toLowerCase())
 
     );
+ 
   return (
     <div className="App">
      
 
 
    
-   <SearchBox  placeHolder='Enter your Name' handleSearchBox={e => {this.setState({serachField:e.target.value})}} />
+   <SearchBox  placeHolder='Enter your Name' handleSearchBox={this.handleChange} />
    
       <CardList Love={filterMonster} />
   
