@@ -37,6 +37,7 @@ handleChange= e => {
     <div className="App">
      
 
+        <h1 className='title'>This is a minature cinema For intersting into Art</h1>
 
    
    <SearchBox  placeHolder='Enter your Name' handleSearchBox={this.handleChange} />
