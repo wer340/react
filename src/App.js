@@ -8,7 +8,8 @@ class App extends Component {
     super();
     this.state={
       message:"my world getting little for this resents approach me ",
-      monsters:[]
+      monsters:[],
+      serachField:""
            
     }
   }
@@ -23,10 +24,10 @@ componentDidMount(){
   render(){
   return (
     <div className="App">
-    <h1>hi my world </h1>
-    <h1>{this.state.message}</h1>
-    <button onClick={()=>{this.setState({message:"Would you like to abolish this law"})}}>ClickMe</button>
+      <h1>{this.state.message}</h1>
 
+    <button onClick={()=>{this.setState({message:"Would you like to abolish this law"})}}>ClickMe</button>
+<input type='search' onChange={e =>console.log(e)} />
     
     
       <CardList Love={this.state.monsters} />
