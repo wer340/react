@@ -11,7 +11,7 @@ return <div className='card-container'>
 { <img alt='flower' src={window.location.origin +`/image/image0${props.Monstering.id}.jpg`}></img>}
 <h1>{props.Monstering.name}</h1>
 <h3>{props.Monstering.email}</h3>
-<h4>{props.Monstering.address.city}</h4>
+{/* <h4>{props.Monstering.address.city}</h4> */}
 </div>;
 
 }
