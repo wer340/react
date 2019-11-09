@@ -2,7 +2,7 @@
   "name": "moster_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wer340.github.io/react/",
+  "homepage": "https://wer340.github.io/reactjs/",
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
