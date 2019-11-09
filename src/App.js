@@ -19,10 +19,11 @@ componentDidMount(){
   .then( data =>data.json())//data=response
   // .then( data =>console.log(data))//data=response
   .then(item=>this.setState({monsters:item}))//item=users best practise
- this.handleChange=this.handleChange.bind(this);
+//  this.handleChange=this.handleChange.bind(this);
 
 }
-handleChange(e){
+//handle change put out of render
+handleChange= e => {
   this.setState({serachField:e.target.value});
 }
   render(){
