@@ -22,9 +22,9 @@ componentDidMount(){
 
 }
   render(){
-    const{monsters,serachField}=this.state;
-    const filterMonster=monsters.filter(
-      item => item.name.toLowerCase().includes(serachField.toLowerCase())
+    // const{monsters,serachField}=this.state;
+    const filterMonster=this.state.monsters.filter(
+      item => item.name.toLowerCase().includes(this.state.serachField.toLowerCase())
 
     );
   return (
@@ -35,6 +35,7 @@ componentDidMount(){
 <input type='search' onChange={e =>{this.setState({serachField:e.target.value})}} />
    
       <CardList Love={filterMonster} />
+      {console.log(this.state.monsters)}
     
     
     </div>
