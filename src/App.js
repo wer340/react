@@ -22,15 +22,19 @@ componentDidMount(){
 
 }
   render(){
+    const{monsters,serachField}=this.state;
+    const filterMonster=monsters.filter(
+      item => item.name.toLowerCase().includes(serachField.toLowerCase())
+
+    );
   return (
     <div className="App">
       <h1>{this.state.message}</h1>
 
     <button onClick={()=>{this.setState({message:"Would you like to abolish this law"})}}>ClickMe</button>
-<input type='search' onChange={e =>{this.setState({serachField:e.target.value},()=>{console.log(this.state)})}} />
-    {/* {console.log(this.state.serachField)} */}
-    
-      <CardList Love={this.state.monsters} />
+<input type='search' onChange={e =>{this.setState({serachField:e.target.value})}} />
+   
+      <CardList Love={filterMonster} />
     
     
     </div>
