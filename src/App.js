@@ -27,8 +27,8 @@ componentDidMount(){
       <h1>{this.state.message}</h1>
 
     <button onClick={()=>{this.setState({message:"Would you like to abolish this law"})}}>ClickMe</button>
-<input type='search' onChange={e =>console.log(e)} />
-    
+<input type='search' onChange={e =>this.setState({serachField:e.target.value})} />
+    {console.log(this.state.serachField)}
     
       <CardList Love={this.state.monsters} />
     
