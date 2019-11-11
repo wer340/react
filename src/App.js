@@ -10,7 +10,8 @@ class App extends Component {
     this.state={
       message:"my world getting little for this resents approach me ",
       monsters:[],
-      serachField:""
+      serachField:"",
+      title:""
            
     }
   }
@@ -24,10 +25,10 @@ componentDidMount(){
 }
 //handle change put out of render
 handleChange= e => {
-  this.setState({serachField:e.target.value});
+  this.setState({serachField:e.target.value,title:e.target.value});
 }
   render(){
-    const{monsters,serachField}=this.state;
+    const{monsters,serachField,title}=this.state;
     const filterMonster=monsters.filter(
       item => item.name.toLowerCase().includes(serachField.toLowerCase())
 
@@ -37,7 +38,7 @@ handleChange= e => {
     <div className="App">
      
 
-        <h1 className='title'>This is a minature cinema For intersting into Art</h1>
+  <h1 className='title'>{title}</h1>
 
    
    <SearchBox  placeHolder='Enter your Name' handleSearchBox={this.handleChange} />
